@@ -1,0 +1,28 @@
+* Starbuck Offer Predictor
+The project outline the process of using the starbuck data to process the offers
+for customers
+
+** Libraries
+- xgboost
+
+** Order of execution
+The notebook should be executed in following order
+- [[file:data_exploration_preprocessing.ipynb][Data Exploration]]
+- [[file:data_cleaning_classification.ipynb][Data Cleaning]]
+- [[file:clustering_customers.ipynb][Modeling]]
+
+** Solution
+***** Cluster and offers
+| Cluster | Offer Type   |
+|---------+--------------|
+|       0 | Sleeping Dog |
+|       1 | Discount     |
+|       2 | Discount     |
+|       3 | Discount     |
+|       4 | Bogo         |
+|       5 | Sleeping Dog |
+
+A model that can predict the cluster of customer based on it
+past transaction, we can easily then decide which offer to send to them on quick heuristics.
+The model can also be retrained every 15 days on the latest customer data to
+identify new customer groups and also see any change in behavior.
